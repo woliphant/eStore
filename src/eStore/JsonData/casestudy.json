@@ -1,222 +1,222 @@
 [
 {
-	"Id" : "gx670-a"
-	"CostPrice" : "9.99"
-	"Description" : "An action role-playing open-world video game"
-	"GraphicBrand" : "fable"
-	"MSRP" : "8.99"
-	"ProductName" : "Fable The Lost Chapters"
-	"QtyOnBackOrder" : "5"
-	"QtyOnHand" : "15"
+	"Id" : "gx670-a",
+	"CostPrice" : "9.99",
+	"Description" : "An action role-playing open-world video game",
+	"GraphicBrand" : "fable",
+	"MSRP" : "8.99",
+	"ProductName" : "Fable The Lost Chapters",
+	"QtyOnBackOrder" : "5",
+	"QtyOnHand" : "15",
 	"Brand" : "Xbox"
-}
+},
 {
-	"Id" : "gx670-b"
-	"CostPrice" : "59.99"
-	"Description" : "Space man can't stop exploding rings in outer-space"
-	"GraphicBrand" : "halo"
-	"MSRP" : "39.99"
-	"ProductName" : "Halo 5"
-	"QtyOnBackOrder" : "6000"
-	"QtyOnHand" : "10000"
+	"Id" : "gx670-b",
+	"CostPrice" : "59.99",
+	"Description" : "Space man can't stop exploding rings in outer-space",
+	"GraphicBrand" : "halo",
+	"MSRP" : "39.99",
+	"ProductName" : "Halo 5",
+	"QtyOnBackOrder" : "6000",
+	"QtyOnHand" : "10000",
 	"Brand" : "Xbox"
-}
+},
 {
-	"Id" : "gx670-c"
-	"CostPrice" : "35.49"
-	"Description" : "Big Guys use chain saws to cut bad guys"
-	"GraphicBrand" : "gears"
-	"MSRP" : "20.99"
-	"ProductName" : "Gears of War"
-	"QtyOnBackOrder" : "400"
-	"QtyOnHand" : "1000"
+	"Id" : "gx670-c",
+	"CostPrice" : "35.49",
+	"Description" : "Big Guys use chain saws to cut bad guys",
+	"GraphicBrand" : "gears",
+	"MSRP" : "20.99",
+	"ProductName" : "Gears of War",
+	"QtyOnBackOrder" : "400",
+	"QtyOnHand" : "1000",
 	"Brand" : "Xbox"
-}
+},
 {
-	"Id" : "gx670-d"
-	"CostPrice" : "49.99"
-	"Description" : "Man survives zombie apocalypse using absurd weapons"
-	"GraphicBrand" : "deadrising"
-	"MSRP" : "30.00"
-	"ProductName" : "Dead Rising 3"
-	"QtyOnBackOrder" : "5000"
-	"QtyOnHand" : "10000"
+	"Id" : "gx670-d",
+	"CostPrice" : "49.99",
+	"Description" : "Man survives zombie apocalypse using absurd weapons",
+	"GraphicBrand" : "deadrising",
+	"MSRP" : "30.00",
+	"ProductName" : "Dead Rising 3",
+	"QtyOnBackOrder" : "5000",
+	"QtyOnHand" : "10000",
 	"Brand" : "Xbox"
-}
+},
 {
-	"Id" : "gx670-e"
-	"CostPrice" : "59.99"
-	"Description" : "Pretty cars go pretty fast"
-	"GraphicBrand" : "forza"
-	"MSRP" : "10.99"
-	"ProductName" : "Forza"
-	"QtyOnBackOrder" : "200"
-	"QtyOnHand" : "600"
+	"Id" : "gx670-e",
+	"CostPrice" : "59.99",
+	"Description" : "Pretty cars go pretty fast",
+	"GraphicBrand" : "forza",
+	"MSRP" : "10.99",
+	"ProductName" : "Forza",
+	"QtyOnBackOrder" : "200",
+	"QtyOnHand" : "600",
 	"Brand" : "Xbox"
-}
+},
 {
-	"Id" : "gx670-f"
-	"CostPrice" : "59.99"
-	"Description" : "Lombax and Robot fight bad things"
-	"GraphicBrand" : "ratchet"
-	"MSRP" : "39.99"
-	"ProductName" : "Ratchet and Clank"
-	"QtyOnBackOrder" : "4000"
-	"QtyOnHand" : "2000"
+	"Id" : "gx670-f",
+	"CostPrice" : "59.99",
+	"Description" : "Lombax and Robot fight bad things",
+	"GraphicBrand" : "ratchet",
+	"MSRP" : "39.99",
+	"ProductName" : "Ratchet and Clank",
+	"QtyOnBackOrder" : "4000",
+	"QtyOnHand" : "2000",
 	"Brand" : "PlayStation"
-}
+},
 {
-	"Id" : "gx670-g"
-	"CostPrice" : "29.99"
-	"Description" : "Man shoots lightning from his finger tips"
-	"GraphicBrand" : "infamous"
-	"MSRP" : "9.99"
-	"ProductName" : "Infamous"
-	"QtyOnBackOrder" : "500"
-	"QtyOnHand" : "1000"
+	"Id" : "gx670-g",
+	"CostPrice" : "29.99",
+	"Description" : "Man shoots lightning from his finger tips",
+	"GraphicBrand" : "infamous",
+	"MSRP" : "9.99",
+	"ProductName" : "Infamous",
+	"QtyOnBackOrder" : "500",
+	"QtyOnHand" : "1000",
 	"Brand" : "PlayStation"
-}
+},
 {
-	"Id" : "gx670-h"
-	"CostPrice" : "59.99"
-	"Description" : "A bunch of cars shoots bombs at each other"
-	"GraphicBrand" : "twistedmetal"
-	"MSRP" : "39.99"
-	"ProductName" : "Twisted Metal"
-	"QtyOnBackOrder" : "700"
-	"QtyOnHand" : "7000"
+	"Id" : "gx670-h",
+	"CostPrice" : "59.99",
+	"Description" : "A bunch of cars shoots bombs at each other",
+	"GraphicBrand" : "twistedmetal",
+	"MSRP" : "39.99",
+	"ProductName" : "Twisted Metal",
+	"QtyOnBackOrder" : "700",
+	"QtyOnHand" : "7000",
 	"Brand" : "PlayStation"
-}
+},
 {
-	"Id" : "gx670-i"
-	"CostPrice" : "9.99"
-	"Description" : "A bunch of weeaboos unite to fight evil"
-	"GraphicBrand" : "kingdom"
-	"MSRP" : ".99"
-	"ProductName" : "Kingdom Hearts"
-	"QtyOnBackOrder" : "12"
-	"QtyOnHand" : "24"
+	"Id" : "gx670-i",
+	"CostPrice" : "9.99",
+	"Description" : "A bunch of weeaboos unite to fight evil",
+	"GraphicBrand" : "kingdom",
+	"MSRP" : ".99",
+	"ProductName" : "Kingdom Hearts",
+	"QtyOnBackOrder" : "12",
+	"QtyOnHand" : "24",
 	"Brand" : "PlayStation"
-}
+},
 {
-	"Id" : "gx670-j"
-	"CostPrice" : "69.99"
-	"Description" : "A guy looks for treasure in a very good looking game"
-	"GraphicBrand" : "uncharted"
-	"MSRP" : "59.99"
-	"ProductName" : "uncharted 4"
-	"QtyOnBackOrder" : "10000"
-	"QtyOnHand" : "250"
+	"Id" : "gx670-j",
+	"CostPrice" : "69.99",
+	"Description" : "A guy looks for treasure in a very good looking game",
+	"GraphicBrand" : "uncharted",
+	"MSRP" : "59.99",
+	"ProductName" : "uncharted 4",
+	"QtyOnBackOrder" : "10000",
+	"QtyOnHand" : "250",
 	"Brand" : "PlayStation"
-}
+},
 {
-	"Id" : "gx670-k"
-	"CostPrice" : "59.99"
-	"Description" : "A guy in a green suit fights bad guys in different time periods"
-	"GraphicBrand" : "zelda"
-	"MSRP" : "49.99"
-	"ProductName" : "Legend of Zelda Ocarina of Time"
-	"QtyOnBackOrder" : "5000"
-	"QtyOnHand" : "30"
+	"Id" : "gx670-k",
+	"CostPrice" : "59.99",
+	"Description" : "A guy in a green suit fights bad guys in different time periods",
+	"GraphicBrand" : "zelda",
+	"MSRP" : "49.99",
+	"ProductName" : "Legend of Zelda Ocarina of Time",
+	"QtyOnBackOrder" : "5000",
+	"QtyOnHand" : "30",
 	"Brand" : "Nintendo"
-}
+},
 {
-	"Id" : "gx670-l"
-	"CostPrice" : "39.99"
-	"Description" : "A bunch of sell outs drive go-karts while throwing dangerous weapons at each other"
-	"GraphicBrand" : "mariokart"
-	"MSRP" : "29.99"
-	"ProductName" : "Mario Kart 8"
-	"QtyOnBackOrder" : "700"
-	"QtyOnHand" : "900"
+	"Id" : "gx670-l",
+	"CostPrice" : "39.99",
+	"Description" : "A bunch of sell outs drive go-karts while throwing dangerous weapons at each other",
+	"GraphicBrand" : "mariokart",
+	"MSRP" : "29.99",
+	"ProductName" : "Mario Kart 8",
+	"QtyOnBackOrder" : "700",
+	"QtyOnHand" : "900",
 	"Brand" : "Nintendo"
-}
+},
 {
-	"Id" : "gx670-m"
-	"CostPrice" : "59.99"
-	"Description" : "People try to play mario multiplayer but end up killing each other and becoming salty"
-	"GraphicBrand" : "supermario"
-	"MSRP" : "49.99"
-	"ProductName" : "Super Mario Brothers Wii"
-	"QtyOnBackOrder" : "900"
-	"QtyOnHand" : "800"
+	"Id" : "gx670-m",
+	"CostPrice" : "59.99",
+	"Description" : "People try to play mario multiplayer but end up killing each other and becoming salty",
+	"GraphicBrand" : "supermario",
+	"MSRP" : "49.99",
+	"ProductName" : "Super Mario Brothers Wii",
+	"QtyOnBackOrder" : "900",
+	"QtyOnHand" : "800",
 	"Brand" : "Nintendo"
-}
+},
 {
-	"Id" : "gx670-n"
-	"CostPrice" : "40.00"
-	"Description" : "The lesser known Mario buys a house full of spooky ghosts"
-	"GraphicBrand" : "luigi"
-	"MSRP" : "20.99"
-	"ProductName" : "Luigi's Mansion"
-	"QtyOnBackOrder" : "40"
-	"QtyOnHand" : "420"
+	"Id" : "gx670-n",
+	"CostPrice" : "40.00",
+	"Description" : "The lesser known Mario buys a house full of spooky ghosts",
+	"GraphicBrand" : "luigi",
+	"MSRP" : "20.99",
+	"ProductName" : "Luigi's Mansion",
+	"QtyOnBackOrder" : "40",
+	"QtyOnHand" : "420",
 	"Brand" : "Nintendo"
-}
+},
 {
-	"Id" : "gx670-o"
-	"CostPrice" : "29.99"
-	"Description" : "Big monkey goes on a crocodile killing spree trying to collect bananas"
-	"GraphicBrand" : "donkey"
-	"MSRP" : "19.50"
-	"ProductName" : "Donkey Kong Country"
-	"QtyOnBackOrder" : "600"
-	"QtyOnHand" : "200"
+	"Id" : "gx670-o",
+	"CostPrice" : "29.99",
+	"Description" : "Big monkey goes on a crocodile killing spree trying to collect bananas",
+	"GraphicBrand" : "donkey",
+	"MSRP" : "19.50",
+	"ProductName" : "Donkey Kong Country",
+	"QtyOnBackOrder" : "600",
+	"QtyOnHand" : "200",
 	"Brand" : "Nintendo"
-}
+},
 {
-	"Id" : "gx670-p"
-	"CostPrice" : "49.99"
-	"Description" : "A bunch of orcs fight humans with a bunch of other races in the background"
-	"GraphicBrand" : "wow"
-	"MSRP" : "39.99"
-	"ProductName" : "World of Warcraft"
-	"QtyOnBackOrder" : "600"
-	"QtyOnHand" : "10000"
+	"Id" : "gx670-p",
+	"CostPrice" : "49.99",
+	"Description" : "A bunch of orcs fight humans with a bunch of other races in the background",
+	"GraphicBrand" : "wow",
+	"MSRP" : "39.99",
+	"ProductName" : "World of Warcraft",
+	"QtyOnBackOrder" : "600",
+	"QtyOnHand" : "10000",
 	"Brand" : "PC"
-}
+},
 {
-	"Id" : "gx670-q"
-	"CostPrice" : "59.99"
-	"Description" : "Diablo comes back surprisingly for a third time and no one saw it coming"
-	"GraphicBrand" : "diablo"
-	"MSRP" : "49.99"
-	"ProductName" : "Diablo 3"
-	"QtyOnBackOrder" : "600"
-	"QtyOnHand" : "500"
+	"Id" : "gx670-q",
+	"CostPrice" : "59.99",
+	"Description" : "Diablo comes back surprisingly for a third time and no one saw it coming",
+	"GraphicBrand" : "diablo",
+	"MSRP" : "49.99",
+	"ProductName" : "Diablo 3",
+	"QtyOnBackOrder" : "600",
+	"QtyOnHand" : "500",
 	"Brand" : "PC"
-}
+},
 {
-	"Id" : "gx670-r"
-	"CostPrice" : "29.99"
-	"Description" : "You can farm things and waste your time until realizing you're really doing nothing with your life"
-	"GraphicBrand" : "stardew"
-	"MSRP" : "19.99"
-	"ProductName" : "Stardew Valley"
-	"QtyOnBackOrder" : "900"
-	"QtyOnHand" : "500"
+	"Id" : "gx670-r",
+	"CostPrice" : "29.99",
+	"Description" : "You can farm things and waste your time until realizing you're really doing nothing with your life",
+	"GraphicBrand" : "stardew",
+	"MSRP" : "19.99",
+	"ProductName" : "Stardew Valley",
+	"QtyOnBackOrder" : "900",
+	"QtyOnHand" : "500",
 	"Brand" : "PC"
-}
+},
 {
-	"Id" : "gx670-s"
-	"CostPrice" : "15.99"
-	"Description" : "A lot of things happen that aren't explainable even if you play it"
-	"GraphicBrand" : "isaac"
-	"MSRP" : "12.99"
-	"ProductName" : "The Binding of Isaac"
-	"QtyOnBackOrder" : "1400"
-	"QtyOnHand" : "20000"
+	"Id" : "gx670-s",
+	"CostPrice" : "15.99",
+	"Description" : "A lot of things happen that aren't explainable even if you play it",
+	"GraphicBrand" : "isaac",
+	"MSRP" : "12.99",
+	"ProductName" : "The Binding of Isaac",
+	"QtyOnBackOrder" : "1400",
+	"QtyOnHand" : "20000",
 	"Brand" : "PC"
-}
+},
 {
-	"Id" : "gx670-t"
-	"CostPrice" : "20.50"
-	"Description" : "A rts game set in ancient mythology times. It's pretty neat"
-	"GraphicBrand" : "mythology"
-	"MSRP" : "15.50"
-	"ProductName" : "Age of Mythology"
-	"QtyOnBackOrder" : "400"
-	"QtyOnHand" : "1000"
+	"Id" : "gx670-t",
+	"CostPrice" : "20.50",
+	"Description" : "A rts game set in ancient mythology times. It's pretty neat",
+	"GraphicBrand" : "mythology",
+	"MSRP" : "15.50",
+	"ProductName" : "Age of Mythology",
+	"QtyOnBackOrder" : "400",
+	"QtyOnHand" : "1000",
 	"Brand" : "PC"
 }
 ]

@@ -32,7 +32,7 @@ namespace eStore.Controllers
         }
         private async Task<String> getMenuItemJsonFromWeb()
         {
-            string url = "https://raw.githubusercontent.com/pffy/data-mcdonalds-nutritionfacts/master/json/mcd.json";
+            string url = "https://raw.githubusercontent.com/woliphant/eStore/master/src/eStore/JsonData/casestudy.json";
             var httpClient = new HttpClient();
             var response = await httpClient.GetAsync(url);
             var result = await response.Content.ReadAsStringAsync();
