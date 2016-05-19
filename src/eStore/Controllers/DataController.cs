@@ -22,9 +22,9 @@ namespace eStore.Controllers
         {
             ProductModel model = new ProductModel(_db);
             string rawJsonString = await getMenuItemJsonFromWeb();
-            bool categoriesLoaded = model.loadBrands(rawJsonString);
-            bool menuItemsLoaded = model.loadProducts(rawJsonString);
-            if (categoriesLoaded && menuItemsLoaded)
+            bool brandsloaded = model.loadBrands(rawJsonString);
+            bool productsloaded = model.loadProducts(rawJsonString);
+            if (brandsloaded && productsloaded)
                 ViewBag.JsonLoadedMsg = "Json Loaded Successfully";
             else
                 ViewBag.JsonLoadedMsg = "Json NOT Loaded";
