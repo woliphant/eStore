@@ -1,0 +1,12 @@
+﻿@model BrandViewModel
+<div class=" col-sm-4 col-xs-2"style="top:15%;">&nbsp;</div>
+<div class="text-center col-sm-4 col-xs-8" style="border:double;top:50px;">
+    <h4>Brands</h4>
+    <br />
+    <form asp-controller="Product" asp-action="Index" method="post">
+        <div class="col-sm-8 col-xs-12">
+            <select asp-for="BrandName" asp-items="@Model.GetBrandNames()"
+            class="form-group form-control" onchange="this.form.submit();"></select>
+        </div>
+    </form>
+</div>

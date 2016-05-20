@@ -42,6 +42,7 @@ namespace eStore
             app.UseIISPlatformHandler();
             app.UseDeveloperExceptionPage();
             app.UseIdentity();
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
