@@ -34,6 +34,13 @@ namespace eStore
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddCaching();
+
+            services.AddSession(o => 
+            {
+                o.IdleTimeout = TimeSpan.FromSeconds(200);
+            });
+
             services.AddMvc();
         }
         // This method gets called by the runtime. Method to configure the HTTP request pipeline.
@@ -43,6 +50,7 @@ namespace eStore
             app.UseDeveloperExceptionPage();
             app.UseIdentity();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

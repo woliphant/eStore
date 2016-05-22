@@ -18,6 +18,6 @@ namespace eStore.ViewModels
                 Value = brand.Name
             });
         }
-        //public IEnumerable<Product> Products { get; set; }
+        public IEnumerable<Product> Products { get; set; }
     }
 }
