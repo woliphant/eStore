@@ -12,12 +12,12 @@
         CopyToModal(Id);
     });
 });
+
 function CopyToModal(id) {
-    var data = JSON.parse($("#menuitem" + id).val());
-    $("#name").text(data.ProductName);
-    $("#brand").text(data.BrandName);
-    $("#price").text(data.CostPrice);
-    $("#description").text(data.Description);
-    $("#detailsGraphic").attr("src", "/img/" + data.GraphicName + ".png");
+    $("#qty").val("0");
+    $("#description").text($("#descr" + id).data("description"));
+    $("#brand").text($("#pbrand").data("brand"));
+    $("#name").text($("#pname" + id).data("name"));
+    $("#price").text($("#pprice" + id).val());
     $("#detailsId").val(id);
 }
