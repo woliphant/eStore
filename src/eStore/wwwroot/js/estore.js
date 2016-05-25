@@ -1,6 +1,6 @@
 ﻿$(function () {
     // display message if modal still loaded i
-    if ($("#detailsId").val() > 0) {
+    if ($("#detailsId").val() != "") {
         var Id = $("#detailsId").val();
         CopyToModal(Id);
         $('#details_popup').modal('show');
@@ -11,11 +11,12 @@
         $("#results").text("");
         CopyToModal(Id);
     });
-
     if ($("#register_popup") != undefined) {
         $('#register_popup').modal('show');
     }
-
+    if ($("#login_popup") != undefined) {
+        $('#login_popup').modal('show');
+    }
 });
 
 function CopyToModal(id) {

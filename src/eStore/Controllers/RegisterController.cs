@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using eStore.Models;
 using Microsoft.AspNet.Http;
 using eStore.ViewModels;
+using eStore.Utils;
 
 namespace eStore.Controllers
 {
@@ -18,13 +19,12 @@ namespace eStore.Controllers
             _usrMgr = userManager;
             _signInMgr = signInManager;
         }
-        // GET: Products
+        
         public ActionResult Index()
         {
             return View();
         }
-        //
-        // POST:/Register/Register
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Route("Register/Register")]
@@ -37,8 +37,8 @@ namespace eStore.Controllers
                 if (result.Succeeded)
                 {
                     await _signInMgr.SignInAsync(user, isPersistent: false);
-                    HttpContext.Session.SetString("loginstatus", "logged on as " + model.Email);
-                    HttpContext.Session.SetString("Message", "Registered, as " + model.Email);
+                    HttpContext.Session.SetString(SessionVars.LoginStatus, "logged on as " + model.Email);
+                    HttpContext.Session.SetString(SessionVars.Message, "Registered, as " + model.Email);
                 }
                 else
                 {
