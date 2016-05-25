@@ -11,6 +11,11 @@
         $("#results").text("");
         CopyToModal(Id);
     });
+
+    if ($("#register_popup") != undefined) {
+        $('#register_popup').modal('show');
+    }
+
 });
 
 function CopyToModal(id) {
