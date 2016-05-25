@@ -41,7 +41,7 @@ namespace eStore.TagHelpers
                         innerHtml.Append("<input type=\"hidden\" id=\"pbrand" + item.Id + "\" value=\"" + item.BrandName + "\"/>");
                         innerHtml.Append("<input type=\"hidden\" id=\"pname" + item.Id + "\" value=\"" + item.ProductName + "\"/>");
                         innerHtml.Append("<input type=\"hidden\" id=\"pprice" + item.Id + "\" value=\"" + item.CostPrice + "\"/>");
-                        innerHtml.Append("<input type=\"hidden\" id=\"graphic" + item.Id + "\" value=\"" + item.GraphicName + "\"/>");
+                        innerHtml.Append("<input type=\"hidden\" id=\"pgraphic" + item.Id + "\" value=\"" + item.GraphicName + "\"/>");
                         innerHtml.Append("<input type=\"hidden\" id=\"pdescr" + item.Id + "\" value=\"" + item.Description + "\"/></div>");
                     }
                 }

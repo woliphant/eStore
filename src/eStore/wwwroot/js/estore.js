@@ -15,9 +15,10 @@
 
 function CopyToModal(id) {
     $("#qty").val("0");
-    $("#description").text($("#descr" + id).data("description"));
-    $("#brand").text($("#pbrand").data("brand"));
-    $("#name").text($("#pname" + id).data("name"));
+    $("#detailsGraphic").attr("src", "/img/" + $("#pgraphic" + id).val() + ".png");
+    $("#description").text($("#pdescr" + id).val());
+    $("#brand").text($("#pbrand" + id).val());
+    $("#name").text($("#pname" + id).val());
     $("#price").text($("#pprice" + id).val());
     $("#detailsId").val(id);
 }

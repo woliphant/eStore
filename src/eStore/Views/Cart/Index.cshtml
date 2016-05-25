@@ -1,0 +1,69 @@
+﻿<div class="col-sm-3">&nbsp;</div>
+<div class="panel col-sm-6 col-xs-12">
+    <div class="panel-title text-center" style="padding-top:20px;">
+        <h3 style="font-weight:bolder">Cart Contents</h3>
+        <img src="/img/cart.png" style="height:10%;width:10%;padding-bottom:5%;" />
+    </div>
+    <div class="text-center" style="padding-top:10px;">
+        @{
+            Dictionary<int, object> cart = Context.Session.GetObject<Dictionary<int, Object>>("cart");
+            decimal SubTotal = 0.0M;
+            decimal Tax = 0.0M;
+            decimal Total = 0.0M;
+            decimal Extended = 0.0M;
+        }
+        <table class="table table-striped">
+            <tr style="font-weight:bolder;">
+                <th class="col-xs-2 text-center">Qty</th>
+                <th class="col-xs-10 text-center">Description</th>
+            </tr>
+            @{
+                if (cart != null)
+                {
+                    foreach (var key in cart.Keys)
+                    {
+                        ProductViewModel item = JsonConvert.DeserializeObject
+                        <ProductViewModel>
+                        (Convert.ToString(cart[key]));
+                        if (item.Qty > 0)
+                        {
+                            SubTotal += item.CostPrice;
+                            <tr>
+                                <td class="col-xs-2 text-center">@item.Id</td>
+                                <td class="col-xs-2 text-left">@item.Description</td>
+                                <td class="col-xs-2 text-left">@item.CostPrice</td>
+                                <td class="col-xs-2 text-left">@item.Qty</td>
+                                <td class="col-xs-2 text-left">@Extended</td>
+                            </tr>
+                        }
+                    }
+                    Tax = SubTotal * 0.13M;
+                    Total = SubTotal + Tax;
+                }
+            }
+        </table>
+        <hr />
+        <table class="table table-striped">
+            <tr><th colspan="4" class="col-xs-4 text-left" style="font-size:large;font-weight:bold;">Cart Totals</th></tr>
+            <tr>
+                <td class="col-xs-2 text-right">SubTotal: </td>
+                <td class="col-xs-4 text-left" id="cal">@SubTotal</td>
+                <td class="col-xs-2 text-right">Tax: </td>
+                <td class="col-xs-4 text-left" id="chol">@Tax</td>
+            </tr>
+            <tr>
+                <td class="col-xs-2 text-right">Total: </td>
+                <td class="col-xs-4 text-left" id="fat">@Total</td>
+                <td class="col-xs-2 text-right"></td>
+                <td class="col-xs-4 text-left" id="fibre"> </td>
+            </tr>
+            <tr>
+                <td class="col-xs-2 text-right">Protein: </td>
+                <td class="col-xs-4 text-left" id="pro"> </td>
+                <td class="col-xs-2 text-right">Salt: </td>
+                <td class="col-xs-4 text-left" id="salt"> </td>
+            </tr>
+        </table>
+        <a href="/Cart/ClearCart" class="btn btn-sm btn-success">Clear Cart</a>
+    </div>
+</div>
