@@ -6,7 +6,7 @@
     </div>
     <div class="text-center" style="padding-top:10px;">
         @{
-            Dictionary<int, object> cart = Context.Session.GetObject<Dictionary<int, Object>>("cart");
+            Dictionary<string, object> cart = Context.Session.GetObject<Dictionary<string, Object>>("cart");
             decimal SubTotal = 0.0M;
             decimal Tax = 0.0M;
             decimal Total = 0.0M;
@@ -14,8 +14,11 @@
         }
         <table class="table table-striped">
             <tr style="font-weight:bolder;">
-                <th class="col-xs-2 text-center">Qty</th>
-                <th class="col-xs-10 text-center">Description</th>
+                <th class="col-xs-2 text-center">Code</th>
+                <th class="col-xs-3 text-center">Description</th>
+                <th class="col-xs-2 text-center">Msrp</th>
+                <th class="col-xs-1 text-center">Qty</th>
+                <th class="col-xs-2 text-right">Extended</th>
             </tr>
             @{
                 if (cart != null)
@@ -27,15 +30,16 @@
                         (Convert.ToString(cart[key]));
                         if (item.Qty > 0)
                         {
-                            SubTotal += item.CostPrice;
+                            Extended = item.CostPrice * item.Qty;
                             <tr>
                                 <td class="col-xs-2 text-center">@item.Id</td>
-                                <td class="col-xs-2 text-left">@item.Description</td>
-                                <td class="col-xs-2 text-left">@item.CostPrice</td>
-                                <td class="col-xs-2 text-left">@item.Qty</td>
-                                <td class="col-xs-2 text-left">@Extended</td>
+                                <td class="col-xs-3 text-left">@item.Description</td>
+                                <td class="col-xs-2 text-center">@item.CostPrice</td>
+                                <td class="col-xs-1 text-center">@item.Qty</td>
+                                <td class="col-xs-2 text-right">@Extended</td>
                             </tr>
                         }
+                        SubTotal += item.CostPrice * item.Qty;
                     }
                     Tax = SubTotal * 0.13M;
                     Total = SubTotal + Tax;
@@ -44,24 +48,18 @@
         </table>
         <hr />
         <table class="table table-striped">
-            <tr><th colspan="4" class="col-xs-4 text-left" style="font-size:large;font-weight:bold;">Cart Totals</th></tr>
+            <tr><th colspan="4" class="col-xs-4 text-right" style="font-size:large;font-weight:bold;">Cart Totals</th></tr>
             <tr>
-                <td class="col-xs-2 text-right">SubTotal: </td>
-                <td class="col-xs-4 text-left" id="cal">@SubTotal</td>
-                <td class="col-xs-2 text-right">Tax: </td>
-                <td class="col-xs-4 text-left" id="chol">@Tax</td>
+                <td class="col-xs-8 text-right">SubTotal: </td>
+                <td class="col-xs-2 text-left" id="sub">@SubTotal</td>
             </tr>
             <tr>
-                <td class="col-xs-2 text-right">Total: </td>
-                <td class="col-xs-4 text-left" id="fat">@Total</td>
-                <td class="col-xs-2 text-right"></td>
-                <td class="col-xs-4 text-left" id="fibre"> </td>
+                <td class="col-xs-8 text-right">Tax: </td>
+                <td class="col-xs-2 text-left" id="tax">@Tax</td>
             </tr>
             <tr>
-                <td class="col-xs-2 text-right">Protein: </td>
-                <td class="col-xs-4 text-left" id="pro"> </td>
-                <td class="col-xs-2 text-right">Salt: </td>
-                <td class="col-xs-4 text-left" id="salt"> </td>
+                <td class="col-xs-10 text-right">Total: </td>
+                <td class="col-xs-2 text-left" id="total">@Total</td>
             </tr>
         </table>
         <a href="/Cart/ClearCart" class="btn btn-sm btn-success">Clear Cart</a>
