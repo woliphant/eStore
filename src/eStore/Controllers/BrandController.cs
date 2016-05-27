@@ -14,10 +14,15 @@ namespace eStore.Controllers
         {
             _db = context;
         }
+
+        /// <summary>
+        /// Main method for BrandController
+        /// By default, creates a catalogue containing all products
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             CartViewModel vm = new CartViewModel();
-            // only build the catalogue once
             if (HttpContext.Session.GetObject<List<Brand>>("brands") == null)
             {
                 try
@@ -25,6 +30,32 @@ namespace eStore.Controllers
                     BrandModel braModel = new BrandModel(_db);
                     List<Brand> brands = braModel.GetAll();
                     HttpContext.Session.SetObject("brands", brands);
+                    ProductModel prodModel = new ProductModel(_db);
+                    List<Product> pros = prodModel.GetAllByBrand(vm.BrandId);
+                    List<ProductViewModel> vms = new List<ProductViewModel>();
+                    if(pros.Count == 0)
+                    { 
+                        foreach (Brand bra in brands)
+                        {
+                            List<Product> items = prodModel.GetAllByBrand(bra.Id);
+                            foreach(Product item in items)
+                            {
+                                ProductViewModel mvm = new ProductViewModel();
+                                mvm.Qty = 0;
+                                mvm.BrandId = item.BrandId;
+                                mvm.BrandName = braModel.GetName(item.BrandId);
+                                mvm.Description = item.Description;
+                                mvm.Id = item.Id;
+                                mvm.CostPrice = Convert.ToDecimal(item.CostPrice);
+                                mvm.GraphicName = item.GraphicName;
+                                mvm.ProductName = item.ProductName;
+                                vms.Add(mvm);
+                            }
+                        }
+                        ProductViewModel[] myCart = vms.ToArray();
+                        HttpContext.Session.SetObject("order", myCart);
+
+                    }
                     vm.SetBrands(HttpContext.Session.GetObject<List<Brand>>("brands"));
                 }
                 catch (Exception ex)
@@ -36,8 +67,14 @@ namespace eStore.Controllers
             {
                 vm.SetBrands(HttpContext.Session.GetObject<List<Brand>>("brands"));
             }
-            return View(vm);
+            return View("Index", vm);
         }
+
+        /// <summary>
+        /// Creates a Catalogue specific to the chosen Brand
+        /// </summary>
+        /// <param name="vm"></param>
+        /// <returns></returns>
         public IActionResult SelectBrand(CartViewModel vm)
         {
             BrandModel braModel = new BrandModel(_db);
@@ -66,6 +103,12 @@ namespace eStore.Controllers
             return View("Index", vm);
         }
 
+        /// <summary>
+        /// Creates a Cart session if there isn't one yet created. 
+        /// Adds or removes items to and from the Cart session.
+        /// </summary>
+        /// <param name="vm"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult SelectItem(CartViewModel vm)
         {

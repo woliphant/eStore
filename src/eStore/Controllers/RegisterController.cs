@@ -25,6 +25,12 @@ namespace eStore.Controllers
             return View();
         }
         
+        /// <summary>
+        ///  First checks if register information is valid.
+        ///  If information is valid, it proceeds to create a new user in the database.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Route("Register/Register")]

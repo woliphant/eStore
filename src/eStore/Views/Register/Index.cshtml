@@ -18,34 +18,36 @@
                 <form asp-controller="Register" asp-action="Register" method="post" class="form-horizontal" role="form">
                     <div class="tabbable" id="myTabs">
                         <ul class="nav nav-tabs">
+                            <!-- Create a list of tabs for the user to enter different information at registration-->
                             <li class="active"><a href="#personal" data-toggle="tab">Demographic</a></li>
                             <li><a href="#address" data-toggle="tab">Address</a></li>
                             <li><a href="#account" data-toggle="tab">Account</a></li>
                         </ul>
+                        <!-- Start of first tab -->
                         <div class="tab-content">
                             <div class="tab-pane active" id="personal">
-                                <div class="form-group" style="padding-left:5%;padding-top:5%;">
+                                <div class="form-group" style="padding-left:5%;padding-top:5%;"> <!-- First Name Text Box -->
                                     <label asp-for="Firstname" class="col-xs-4 control-label"></label>
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="Firstname" class="form-control" placeholder="First Name" />
                                         <span asp-validation-for="Firstname" class="text-danger"></span>
                                     </div>
                                 </div>
-                                <div class="form-group" style="padding-left:5%;">
+                                <div class="form-group" style="padding-left:5%;"> <!-- Last Name Text Box -->
                                     <label asp-for="Lastname" class="col-xs-4 control-label"></label>
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="Lastname" class="form-control" placeholder="Last Name" />
                                         <span asp-validation-for="Lastname" class="text-danger"></span>
                                     </div>
                                 </div>
-                                <div class="form-group" style="padding-left:5%;">
+                                <div class="form-group" style="padding-left:5%;"> <!-- Age Number Input Box -->
                                     <label asp-for="Age" class="col-xs-4 control-label"></label>
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="Age" type="number" class="form-control" placeholder="Age" />
                                         <span asp-validation-for="Age" class="text-danger"></span>
                                     </div>
                                 </div>
-                                <div class="form-group" style="padding-left:5%;">
+                                <div class="form-group" style="padding-left:5%;"> <!-- Credit Card Drop Down Menu -->
                                     <label asp-for="CreditcardType" class="col-xs-4 control-label"></label>
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <select name="creditcardtype">
@@ -56,8 +58,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Start of the Second Tab -->
                             <div class="tab-pane" id="address">
-                                <div class="form-group" style="padding-top:5%;">
+                                <div class="form-group" style="padding-top:5%;"> <!-- Address Text Box -->
                                     <label asp-for="Address1" class="col-xs-4 control-label"></label>
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="Address1" class="form-control" placeholder="Enter Address" />
@@ -65,21 +68,21 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="City" class="col-xs-4 control-label"></label>
+                                    <label asp-for="City" class="col-xs-4 control-label"></label> <!-- City Text Box-->
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="City" class="form-control" placeholder="Enter City" />
                                         <span asp-validation-for="City" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Region" class="col-xs-4 control-label"></label>
+                                    <label asp-for="Region" class="col-xs-4 control-label"></label> <!-- Region Text Box -->
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="Region" class="form-control" placeholder="Enter Region" />
                                         <span asp-validation-for="Region" class="text-danger"></span>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Country" class="col-xs-4 control-label"></label>
+                                    <label asp-for="Country" class="col-xs-4 control-label"></label> <!-- Country Text Box -->
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <select name="country">
                                             <option value="" disabled selected>Select a Country</option>
@@ -89,36 +92,37 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Mailcode" class="col-xs-4 control-label"></label>
+                                    <label asp-for="Mailcode" class="col-xs-4 control-label"></label> <!-- Mail Code Text Box -->
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="Mailcode" class="form-control" placeholder="Enter Postal Code" />
                                         <span asp-validation-for="Mailcode" class="text-danger"></span>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Start of third tab -->
                             <div class="tab-pane" id="account">
-                                <div class="form-group" style="padding-top:5%;">
+                                <div class="form-group" style="padding-top:5%;"> <!-- Email Text Box -->
                                     <label asp-for="Email" class="col-xs-4 control-label"></label>
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="Email" type="email" class="form-control" placeholder="Enter valid Email" />
                                         <span asp-validation-for="Email" class="text-danger"></span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group"> <!-- Password Text Box -->
                                     <label asp-for="Password" class="col-xs-4 control-label"></label>
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="Password" type="password" class="form-control" placeholder="Enter password" />
                                         <span asp-validation-for="Password" class="text-danger"></span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group"> <!-- Repeat Password Text Box -->
                                     <label asp-for="RepeatPassword" class="col-xs-4 control-label">Repeat PW</label>
                                     <div class="col-xs-7" style="padding-left:5%;">
                                         <input asp-for="RepeatPassword" type="password" class="form-control" placeholder="Enter same password" />
                                         <span asp-validation-for="RepeatPassword" class="text-danger"></span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group"> <!-- Register Submit Button -->
                                     <div class="col-xs-12 text-center">
                                         <button type="submit" class="btn btn-default">Register</button>
                                     </div>

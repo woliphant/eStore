@@ -14,10 +14,16 @@ namespace eStore.Controllers
         {
             _db = context;
         }
+
         public IActionResult Index()
         {
             return View();
         }
+
+        /// <summary>
+        /// Clear all contents from your Cart
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ClearCart()
         {
             HttpContext.Session.Remove("cart"); // clear out current tray
@@ -25,7 +31,10 @@ namespace eStore.Controllers
             return Redirect("/Home");
         }
 
-        // Add the cart, pass the session variable info to the db
+        /// <summary>
+        /// Add your cart to your database, pass the session info to the database.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult AddCart()
         {
             // they can't add a Tray if they're not logged on
