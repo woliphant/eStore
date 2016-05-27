@@ -7,7 +7,7 @@
             <span style="font-size:medium;"></span>
             <h1>BRANDS</h1>
             <select asp-for="BrandId" asp-items="@Model.GetBrands()" class="form-group form-control" onchange="this.form.submit();">
-                <option value=0; selected style="display:none;">Select Brand</option>
+                <option value=0 selected style="display:none;">Select Brand</option>
             </select>
         </div>
         <div class="col-sm-4 col-xs-12">&nbsp;</div>

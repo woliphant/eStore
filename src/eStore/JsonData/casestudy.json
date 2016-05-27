@@ -1,24 +1,24 @@
 [
 {
 	"Id" : "gx670-a",
-	"CostPrice" : "9.99",
+	"CostPrice" : "509.99",
 	"Description" : "An action role-playing open-world video game",
 	"GraphicName" : "fable",
 	"MSRP" : "8.99",
 	"ProductName" : "Fable The Lost Chapters",
-	"QtyOnBackOrder" : "5",
-	"QtyOnHand" : "15",
+	"QtyOnBackOrder" : "0",
+	"QtyOnHand" : "1",
 	"Brand" : "Xbox"
 },
 {
 	"Id" : "gx670-b",
-	"CostPrice" : "59.99",
+	"CostPrice" : "599.99",
 	"Description" : "Space man can't stop exploding rings in outer-space",
 	"GraphicName" : "halo",
 	"MSRP" : "39.99",
 	"ProductName" : "Halo 5",
-	"QtyOnBackOrder" : "6000",
-	"QtyOnHand" : "10000",
+	"QtyOnBackOrder" : "0",
+	"QtyOnHand" : "1",
 	"Brand" : "Xbox"
 },
 {
