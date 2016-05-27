@@ -23,5 +23,11 @@ namespace eStore.Models
         public Cart Cart { get; set; }
         [ForeignKey("ProductId")]
         public Product Product { get; set; }
+        [Required]
+        public int QtyOnHand { get; set; }
+        [Required]
+        public int QtyOrdered { get; set; }
+        [Required]
+        public int QtyBackOrdered { get; set; }
     }
 }

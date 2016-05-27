@@ -115,5 +115,10 @@ namespace eStore.Models
             Brand brand = _db.Brands.First(bra => bra.Name == braname);
             return _db.Products.Where(prod => prod.BrandId == brand.Id).ToList();
         }
+
+        //public Product GetById(string id)
+        //{
+        //    //return _db.Products.FirstorDefault(prod => prod.Id == id);
+        //}
     }
 }
