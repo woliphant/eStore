@@ -135,6 +135,12 @@ namespace eStore.Migrations
 
                     b.Property<int>("Qty");
 
+                    b.Property<int>("QtyBackOrdered");
+
+                    b.Property<int>("QtyOrdered");
+
+                    b.Property<int>("QtySold");
+
                     b.Property<byte[]>("Timer")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasAnnotation("MaxLength", 8)

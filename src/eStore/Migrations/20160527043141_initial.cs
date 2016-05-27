@@ -215,6 +215,9 @@ namespace eStore.Migrations
                     CartId = table.Column<int>(nullable: false),
                     ProductId = table.Column<string>(nullable: false),
                     Qty = table.Column<int>(nullable: false),
+                    QtyBackOrdered = table.Column<int>(nullable: false),
+                    QtyOrdered = table.Column<int>(nullable: false),
+                    QtySold = table.Column<int>(nullable: false),
                     Timer = table.Column<byte[]>(type: "timestamp", nullable: true)
                 },
                 constraints: table =>

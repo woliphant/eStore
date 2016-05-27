@@ -8,7 +8,7 @@ using eStore.Models;
 namespace eStore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20160519165950_initial")]
+    [Migration("20160527043141_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -135,6 +135,12 @@ namespace eStore.Migrations
                         .HasAnnotation("MaxLength", 15);
 
                     b.Property<int>("Qty");
+
+                    b.Property<int>("QtyBackOrdered");
+
+                    b.Property<int>("QtyOrdered");
+
+                    b.Property<int>("QtySold");
 
                     b.Property<byte[]>("Timer")
                         .ValueGeneratedOnAddOrUpdate()

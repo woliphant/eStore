@@ -48,20 +48,27 @@ namespace eStore.Models
                                 cItem.Qty = item.Qty;
                                 cItem.ProductId = item.Id;
                                 cItem.CartId = cart.Id;
-                                _db.CartItems.Add(cItem);
+                                cItem.Product = _db.Products.FirstOrDefault(p => p.Id == item.Id);
+                                if(cItem.Product.QtyOnHand > item.Qty)
+                                {
+                                    cItem.Product.QtyOnHand = cItem.Product.QtyOnHand - item.Qty;
+                                    cItem.QtySold = item.Qty;
+                                    cItem.QtyOrdered = item.Qty;
+                                    cItem.QtyBackOrdered = 0;
+                                    _db.Products.Update(cItem.Product);
+                                    _db.CartItems.Add(cItem);
+                                }
+                                else
+                                {
+                                    cItem.QtyBackOrdered = item.Qty - cItem.Product.QtyOnHand;
+                                    cItem.QtySold = cItem.Product.QtyOnHand;
+                                    cItem.QtyOrdered = item.Qty;
+                                    cItem.Product.QtyOnBackOrder = cItem.Product.QtyOnBackOrder + (item.Qty - cItem.Product.QtyOnHand);
+                                    cItem.Product.QtyOnHand = 0;
+                                    _db.Products.Update(cItem.Product);
+                                    _db.CartItems.Add(cItem);
+                                }
                                 _db.SaveChanges();
-                            }
-
-                            // Update the Product Table
-                            CartItem cartItem = new CartItem();
-                            cartItem.Product = _db.Products.FirstOrDefault(p => p.Id == cartItem.ProductId);
-                            if(cartItem.Product.QtyOnHand > cartItem.Qty)
-                            {
-
-                            }
-                            else
-                            {
-                                //cartItem.
                             }
                         }
                         // test trans by uncommenting out these 3 lines

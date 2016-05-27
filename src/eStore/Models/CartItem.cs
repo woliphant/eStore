@@ -24,7 +24,7 @@ namespace eStore.Models
         [ForeignKey("ProductId")]
         public Product Product { get; set; }
         [Required]
-        public int QtyOnHand { get; set; }
+        public int QtySold { get; set; }
         [Required]
         public int QtyOrdered { get; set; }
         [Required]
