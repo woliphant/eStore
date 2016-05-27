@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNet.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Http;
 using eStore.Utils;
 using eStore.Models;
-using System.Collections.Generic;
-using System;
 
 namespace eStore.Controllers
 {

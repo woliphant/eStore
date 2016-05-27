@@ -25,6 +25,6 @@ function CopyToModal(id) {
     $("#description").text($("#pdescr" + id).val());
     $("#brand").text($("#pbrand" + id).val());
     $("#name").text($("#pname" + id).val());
-    $("#price").text($("#pprice" + id).val());
+    $("#price").text("$" + $("#pprice" + id).val());
     $("#detailsId").val(id);
 }

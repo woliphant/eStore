@@ -1,4 +1,5 @@
-﻿namespace eStore.Utils
+﻿
+namespace eStore.Utils
 {
     public static class SessionVars
     {

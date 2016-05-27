@@ -1,4 +1,7 @@
-﻿<div class="col-sm-3">&nbsp;</div>
+﻿@using Microsoft.AspNet.Http
+@using eStore.Utils
+
+<div class="col-sm-3">&nbsp;</div>
 <div class="panel col-sm-6 col-xs-12">
     <div class="panel-title text-center" style="padding-top:20px;">
         <h3 style="font-weight:bolder">Cart Contents</h3>
@@ -34,9 +37,9 @@
                             <tr>
                                 <td class="col-xs-2 text-center">@item.Id</td>
                                 <td class="col-xs-3 text-left">@item.Description</td>
-                                <td class="col-xs-2 text-center">@item.CostPrice</td>
+                                <td class="col-xs-2 text-center">$@Math.Round(item.CostPrice, 2)</td>
                                 <td class="col-xs-1 text-center">@item.Qty</td>
-                                <td class="col-xs-2 text-right">@Extended</td>
+                                <td class="col-xs-2 text-right">$@Math.Round(Extended,2)</td>
                             </tr>
                         }
                         SubTotal += item.CostPrice * item.Qty;
@@ -51,17 +54,25 @@
             <tr><th colspan="4" class="col-xs-4 text-right" style="font-size:large;font-weight:bold;">Cart Totals</th></tr>
             <tr>
                 <td class="col-xs-8 text-right">SubTotal: </td>
-                <td class="col-xs-2 text-left" id="sub">@SubTotal</td>
+                <td class="col-xs-2 text-left" id="sub">$@Math.Round(SubTotal,2)</td>
             </tr>
             <tr>
                 <td class="col-xs-8 text-right">Tax: </td>
-                <td class="col-xs-2 text-left" id="tax">@Tax</td>
+                <td class="col-xs-2 text-left" id="tax">$@Math.Round(Tax,2)</td>
             </tr>
             <tr>
                 <td class="col-xs-10 text-right">Total: </td>
-                <td class="col-xs-2 text-left" id="total">@Total</td>
+                <td class="col-xs-2 text-left" id="total">$@Math.Round(Total,2)</td>
             </tr>
         </table>
-        <a href="/Cart/ClearCart" class="btn btn-sm btn-success">Clear Cart</a>
+        <div class="text-center">
+            <form asp-controller="Cart" asp-action="AddCart" method="post" role="form">
+                @if (Context.Session.GetString(SessionVars.User) != null)
+                {
+                    <button type="submit" class="btn btn-sm btn-primary" id="modalbtn">Add Cart</button>
+                }
+                &nbsp;<a href="/Cart/ClearCart" class="btn btn-sm btn-success">Clear Cart</a>
+            </form>
+        </div>
     </div>
 </div>

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Http.Features;
 using Newtonsoft.Json;
-
+/// <summary>
+/// extension to session object to handle storing complex object types to session
+/// </summary>
 
 public static class SessionExtensions
 {
