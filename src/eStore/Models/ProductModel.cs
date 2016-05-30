@@ -14,6 +14,11 @@ namespace eStore.Models
             _db = context;
         }
 
+        /// <summary>
+        /// Loads a raw Json, grabs all brands, and stuffs it into the Brands Table
+        /// </summary>
+        /// <param name="rawJson"></param>
+        /// <returns></returns>
         public bool loadBrands(string rawJson)
         {
             bool loadedBrands = false;
@@ -48,6 +53,11 @@ namespace eStore.Models
             return loadedBrands;
         }
 
+        /// <summary>
+        /// Loads Raw Json, grabs all product elements, and stuffs it into the Product Table
+        /// </summary>
+        /// <param name="rawJson"></param>
+        /// <returns></returns>
         public bool loadProducts(string rawJson)
         {
             bool loadedProducts = false;
@@ -100,16 +110,30 @@ namespace eStore.Models
             return regex.Replace(value, "");
         }
 
+        /// <summary>
+        /// Retrieves all products and inserts them into a list
+        /// </summary>
+        /// <returns></returns>
         public List<Product> GetAll()
         {
             return _db.Products.ToList();
         }
 
+        /// <summary>
+        /// Retrieves all Products via the BrandName
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public List<Product> GetAllByBrand(int id)
         {
             return _db.Products.Where(prod => prod.BrandId == id).ToList();
         }
 
+        /// <summary>
+        /// Retrieves all Products via the BrandName
+        /// </summary>
+        /// <param name="braname"></param>
+        /// <returns></returns>
         public List<Product> GetAllByBrandName(string braname)
         {
             Brand brand = _db.Brands.First(bra => bra.Name == braname);

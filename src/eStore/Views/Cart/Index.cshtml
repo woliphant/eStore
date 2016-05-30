@@ -8,6 +8,7 @@
         <img src="/img/cart.png" style="height:10%;width:10%;padding-bottom:5%;" />
     </div>
     <div class="text-center" style="padding-top:10px;">
+        <!-- Declaring variable for View Cart -->
         @{
             Dictionary<string, object> cart = Context.Session.GetObject<Dictionary<string, Object>>("cart");
             decimal SubTotal = 0.0M;
@@ -23,6 +24,7 @@
                 <th class="col-xs-1 text-center">Qty</th>
                 <th class="col-xs-2 text-right">Extended</th>
             </tr>
+            <!-- Calculating totals / taxes / Extended etc....-->
             @{
                 if (cart != null)
                 {
@@ -51,6 +53,7 @@
         </table>
         <hr />
         <table class="table table-striped">
+            <!-- Properly Format Currencies -->
             <tr><th colspan="4" class="col-xs-4 text-right" style="font-size:large;font-weight:bold;">Cart Totals</th></tr>
             <tr>
                 <td class="col-xs-8 text-right">SubTotal: </td>

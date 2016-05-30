@@ -14,6 +14,13 @@ namespace eStore.Models
         {
             _db = ctx;
         }
+
+        /// <summary>
+        /// Adds data into the Cart and CartItems table then updates the Products Table after user adds the cart
+        /// </summary>
+        /// <param name="items"></param>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public int AddCart(Dictionary<string, object> items, string user)
         {
             int cartId = -1;
