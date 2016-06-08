@@ -8,7 +8,7 @@ using eStore.Models;
 namespace eStore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20160527043141_initial")]
+    [Migration("20160608141035_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

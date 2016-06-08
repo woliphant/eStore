@@ -44,7 +44,7 @@ namespace eStore
             services.AddMvc();
         }
         // This method gets called by the runtime. Method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseIISPlatformHandler();
             app.UseDeveloperExceptionPage();
@@ -54,9 +54,14 @@ namespace eStore
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                name: "default",
+                template: "{controller=Home}/{action=Index}/{id?}");
             });
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
+            }
         }
 
         // Entry point for the application.

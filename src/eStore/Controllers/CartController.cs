@@ -66,5 +66,20 @@ namespace eStore.Controllers
             HttpContext.Session.SetString(SessionVars.Message, retMessage);
             return Redirect("/Home");
         }
+
+        public IActionResult List()
+        {
+            if (HttpContext.Session.GetString(SessionVars.User) == null)
+            {
+                return Redirect("/Login");
+            }
+            return View("List");
+        }
+        [Route("[action]")]
+        public IActionResult GetCarts()
+        {
+            CartModel model = new CartModel(_db);
+            return Ok(model.GetCarts(HttpContext.Session.GetString(SessionVars.User)));
+        }
     }
 }

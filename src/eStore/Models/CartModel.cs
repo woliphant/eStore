@@ -94,5 +94,18 @@ namespace eStore.Models
             }
             return cartId;
         }
+
+        public List<Cart> GetCarts(string uid)
+        {
+            try
+            {
+                return _db.Carts.Where(c => c.UserId == uid).ToList();
+            }
+            catch(Exception e)
+            {
+                Console.Write(e.Message);
+                return null;
+            }
+        }
     }
 }
