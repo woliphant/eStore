@@ -22,7 +22,7 @@ namespace eStore.Controllers
         /// <returns></returns>
         public IActionResult Index()
         {
-            CartViewModel vm = new CartViewModel();
+            CartItemsViewModel vm = new CartItemsViewModel();
             if (HttpContext.Session.GetObject<List<Brand>>("brands") == null)
             {
                 try
@@ -75,7 +75,7 @@ namespace eStore.Controllers
         /// </summary>
         /// <param name="vm"></param>
         /// <returns></returns>
-        public IActionResult SelectBrand(CartViewModel vm)
+        public IActionResult SelectBrand(CartItemsViewModel vm)
         {
             BrandModel braModel = new BrandModel(_db);
             ProductModel prodModel = new ProductModel(_db);
@@ -110,7 +110,7 @@ namespace eStore.Controllers
         /// <param name="vm"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult SelectItem(CartViewModel vm)
+        public ActionResult SelectItem(CartItemsViewModel vm)
         {
             Dictionary<string, object> cart;
             if (HttpContext.Session.GetObject<Dictionary<String, Object>>("cart") == null)

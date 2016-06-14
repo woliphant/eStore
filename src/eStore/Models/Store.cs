@@ -9,13 +9,13 @@ namespace eStore.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [StringLength(250)]
+        [StringLength(150)]
         public string Street { get; set; }
 
         [StringLength(150)]
         public string City { get; set; }
 
-        [StringLength(5)]
+        [StringLength(2)]
         public string Region { get; set; }
 
         public double? Longitude { get; set; }

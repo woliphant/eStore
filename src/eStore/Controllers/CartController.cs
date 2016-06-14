@@ -81,5 +81,12 @@ namespace eStore.Controllers
             CartModel model = new CartModel(_db);
             return Ok(model.GetCarts(HttpContext.Session.GetString(SessionVars.User)));
         }
+
+        [Route("[action]/{tid:int}")]
+        public IActionResult GetCartDetails(int tid)
+        {
+            CartModel model = new CartModel(_db);
+            return Ok(model.GetCartDetails(tid, HttpContext.Session.GetString(SessionVars.User)));
+        }
     }
 }

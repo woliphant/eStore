@@ -1,30 +1,25 @@
-﻿using eStore.Models;
-using Microsoft.AspNet.Mvc.Rendering;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace eStore.ViewModels
 {
     public class CartViewModel
     {
-        private List<Brand> _brands;
-        [Required]
-        public int Qty { get; set; }
-        public string Id { get; set; }
-        ///
-        public int BrandId { get; set; }
-        public IEnumerable<SelectListItem> GetBrands()
-        {
-            return _brands.Select(brand => new SelectListItem
-            {
-                Text = brand.Name, Value = Convert.ToString(brand.Id)
-            });
-        }
-        public void SetBrands(List<Brand> bras)
-        {
-            _brands = bras;
-        }
+        public string CartId { get; set; }
+        public string ProductId { get; set; }
+        public string UserId { get; set; }
+        public int QTY { get; set; }
+        public int QTYBackOrdered { get; set; }
+        public int QTYOrdered { get; set; }
+        public string ProductName { get; set; }
+        public decimal MSRP { get; set; }
+        public decimal ExtendedPrice { get; set; }
+        public decimal SubTotal { get; set; }
+        public decimal Tax { get; set; }
+        public string DateCreated { get; set; }
+        public decimal OrderTotal { get; set; }
+        public string Description { get; set; }
     }
 }

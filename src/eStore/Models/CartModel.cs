@@ -107,5 +107,32 @@ namespace eStore.Models
                 return null;
             }
         }
+
+        public List<CartViewModel> GetCartDetails(int tid, string uid)
+        {
+            List<CartViewModel> cartdetails = new List<CartViewModel>();
+            var results = from c in _db.Set<Cart>()
+                          join ci in _db.Set<CartItem>() on c.Id equals ci.CartId
+                          join p in _db.Set<Product>() on ci.ProductId equals p.Id
+                          where (c.UserId == uid && c.Id == tid)
+                          select new CartViewModel
+                          {
+                              CartId = p.Id,
+                              UserId = uid,
+                              OrderTotal = c.PriceTotal * 1.13m,
+                              SubTotal = c.PriceTotal,
+                              Tax = c.PriceTotal * 0.13m,
+                              ProductName = p.ProductName,
+                              ExtendedPrice = p.CostPrice * ci.Qty,
+                              MSRP = p.CostPrice,
+                              Description = p.Description,
+                              QTY = ci.QtySold,
+                              QTYBackOrdered = ci.QtyBackOrdered,
+                              QTYOrdered = ci.QtyOrdered,
+                              DateCreated = c.DateCreated.ToString("yyyy/MM/dd - hh:mm tt")
+                          };
+            cartdetails = results.ToList<CartViewModel>();
+            return cartdetails;
+        }
     }
 }
