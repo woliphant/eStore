@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Http;
 using eStore.Utils;
+using Microsoft.AspNet.Authorization;
 
 namespace eStore.Controllers
 {
     public class HomeController : Controller
     {
+        [AllowAnonymous]
         public IActionResult Index()
         {
             if (HttpContext.Session.GetString(SessionVars.LoginStatus) == null)

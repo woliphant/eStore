@@ -6,6 +6,7 @@ using eStore.Models;
 using Microsoft.AspNet.Http;
 using eStore.ViewModels;
 using eStore.Utils;
+using Microsoft.AspNet.Authorization;
 
 namespace eStore.Controllers
 {
@@ -20,6 +21,7 @@ namespace eStore.Controllers
             _signInMgr = signInManager;
         }
         
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
@@ -33,6 +35,7 @@ namespace eStore.Controllers
         /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         [Route("Register/Register")]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {

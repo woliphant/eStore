@@ -6,6 +6,7 @@ using Microsoft.AspNet.Http;
 using eStore.Models;
 using eStore.ViewModels;
 using eStore.Utils;
+using Microsoft.AspNet.Authorization;
 
 namespace eStore.Controllers
 {
@@ -21,7 +22,8 @@ namespace eStore.Controllers
         }
 
         // GET: Login
-        public ActionResult Index()
+        [AllowAnonymous]
+        public ActionResult Index(string ReturnUrl = null)
         {
             if (HttpContext.Session.Get(SessionVars.LoginStatus) == null)
             {
@@ -33,7 +35,7 @@ namespace eStore.Controllers
             }
             ViewBag.Status = HttpContext.Session.GetString(SessionVars.LoginStatus);
             ViewBag.Message = HttpContext.Session.GetString(SessionVars.Message);
-            ViewBag.ReturnUrl = "/Home";
+            ViewBag.ReturnUrl = ReturnUrl;
             return View();
         }
         private IActionResult RedirectToLocal(string returnUrl)
@@ -52,6 +54,7 @@ namespace eStore.Controllers
         // POST: /Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {
             ViewBag.ReturnUrl = returnUrl;

@@ -38,6 +38,7 @@ var Cart = React.createClass({
         return (
         <div>
             <ListGroupItem onClick={this.open}>
+                <div></div>
                 <span className="col-xs-3 text-left">{this.props.cart.Id}</span>
                 <span className="col-xs-9 order-line">{formatDate(this.props.cart.DateCreated)}</span>
             </ListGroupItem>
@@ -125,14 +126,12 @@ var ModalDetails = React.createClass({
     render: function () {
         return (
             <ListGroupItem>
-                <div>
                 <span className="col-xs-5">{this.props.details.ProductName}</span>
                 <span className="col-xs-2">${this.props.details.MSRP}</span>
                 <span className="col-xs-1">{this.props.details.QTY}</span>
                 <span className="col-xs-1">{this.props.details.QTYOrdered}</span>
                 <span className="col-xs-1">{this.props.details.QTYBackOrdered}</span>
                 <span className="col-xs-2">${this.props.details.ExtendedPrice}</span>
-                </div>
             </ListGroupItem>
        )
     }
