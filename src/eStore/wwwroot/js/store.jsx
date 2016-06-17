@@ -54,7 +54,7 @@ var StoreLocator = React.createClass({
                             + data[i].City + ", " + data[i].Region,
                             html: "<div>" + "Store# " + data[i].Id + "<br/>" +
                             data[i].Street + ", " + data[i].City + "<br/>" +
-                            data[i].Distance.toFixed(2) + " mi</div>"
+                            data[i].Distance.toFixed(2) + " km</div>"
                         });
                         google.maps.event.addListener(marker, 'click', function () {
                             infowindow.setContent(this.html); // added .html to the marker object.

@@ -75,6 +75,7 @@ namespace eStore.Controllers
             }
             return View("List");
         }
+
         [Route("[action]")]
         public IActionResult GetCarts()
         {

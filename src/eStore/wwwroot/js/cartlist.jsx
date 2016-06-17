@@ -16,6 +16,12 @@ var qtyStyle = {
     paddingRight: "10px"
 }
 
+var listSyle = {
+    textAlign: "left",
+    paddingBottom: "30px",
+    border: "none"
+}
+
 var Cart = React.createClass({
     getInitialState() {
         return { showModal: false, cartdetails: [] };
@@ -67,9 +73,9 @@ var Cart = React.createClass({
                 </Modal.Body>
                 <Modal.Footer>
                     <div className="text-right">
-                        <span className="col-xs-12 text-right">SubTotal: ${this.props.cart.PriceTotal}</span>
-                        <span className="col-xs-12 text-right">Tax: ${this.props.cart.PriceTotal * 0.13}</span>
-                        <span className="col-xs-12 text-right">Order Total: ${this.props.cart.PriceTotal * 1.13}</span>
+                        <span className="col-xs-12 text-right">SubTotal: ${(this.props.cart.PriceTotal).toFixed(2)}</span>
+                        <span className="col-xs-12 text-right">Tax: ${(this.props.cart.PriceTotal * 0.13).toFixed(2)}</span>
+                        <span className="col-xs-12 text-right">Order Total: ${(this.props.cart.PriceTotal * 1.13).toFixed(2)}</span>
                     </div>
                 </Modal.Footer>
             </Modal>
@@ -125,9 +131,9 @@ var Cartlist = React.createClass({
 var ModalDetails = React.createClass({
     render: function () {
         return (
-            <ListGroupItem>
+            <ListGroupItem style={listSyle}>
                 <span className="col-xs-5">{this.props.details.ProductName}</span>
-                <span className="col-xs-2">${this.props.details.MSRP}</span>
+                <span className="col-xs-2">${(this.props.details.MSRP).toFixed(2)}</span>
                 <span className="col-xs-1">{this.props.details.QTY}</span>
                 <span className="col-xs-1">{this.props.details.QTYOrdered}</span>
                 <span className="col-xs-1">{this.props.details.QTYBackOrdered}</span>
